@@ -18,3 +18,32 @@ body::before {
     text-align: center;
 }
 
+th, td
+{
+    border:1px solid black
+}
+
+table
+{
+    margin: auto;
+    position: relative;
+    width: 30%;
+    border:1px solid black;
+    table-layout: auto;
+}
+
+.fieldName
+{
+    text-align: right;
+    width: 200px;
+}
+
+.data
+{
+    text-align: left;
+}
+
+#TableHeading
+{
+    color: darkblue;
+}
