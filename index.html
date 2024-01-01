@@ -6,16 +6,56 @@
   </head>
   <body>
     <div class="Base">    
-        <h1>Please Enter your details as below</h1>
-        <br>
+        <h1>PLEASE ENTER YOUR DETAILS BELOW</h1>
         <div>
-            <form action="/action_page.php">
+            
+                <H4>Your Name:</H4>
                 <label for="fname">First name:</label>
                 <input type="text" id="fname" name="fname"><br><br>
                 <label for="lname">Last name:</label>
                 <input type="text" id="lname" name="lname"><br><br>
-                <input type="submit" value="Submit">
-            </form>
+                <H4>Your Gender:</H4>
+                <input type="radio" id="Male" name="Gender" value=1>
+                <label for="Male">Male</label>
+                <input type="radio" id="Female" name="Gender" value=0>
+                <label for="Female">Female</label>
+                <input type="radio" id="Other" name="Gender" value=9>
+                <label for="Other">Other</label>
+                <br>
+                <br>
+                <H4>Your Birth Date:</H4>
+                <label for="birthdate">Birth Date:</label>
+                <input type="date" id="birthdate" name="birthdate">
+                <br>
+                <br>
+                <br>
+                <button onclick="myFunction()">Show Entered Data</button>    
+            
+        </div>
+        <br><br>
+        <h1>YOUR ENTERED DETAILS</h1>
+        <div id = "Results">
+          <table>
+            <tr class="tableHead">
+              <td class="fieldName">Field</td>
+              <td>Data</td>
+            </tr>
+            <tr>
+              <td class="fieldName">First Name:</td>
+              <td>
+                <p id="FirstName" name="FirstName"></p>
+              </td>
+              
+            </tr>
+          </table>
+      
+        
+          <script>
+            function myFunction() {
+              var x = document.getElementById("fname").value;
+              document.getElementById("FirstName").innerHTML = x;
+            }
+            </script>
         </div>
     </div>
     
